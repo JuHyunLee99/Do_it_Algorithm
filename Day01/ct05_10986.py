@@ -21,6 +21,8 @@ for i in range(n):
         answer += 1         # 정답에 +1
     C[remainder] += 1       # 나머지 같은 인덱스 카운트
 
+# S[i] % M = S[j] % M 이면 (S[i]-S[j]) % M = 0
+# 원본리스트에서 j+1부터 i까지의 구간 합이 M으로 나누어 떨어진다는 것.
 # 나머지가 같은 인덱스 중 2개를 뽑는 경우의 수를 더하기(조합C[i]C2)
 for i in range(m):
     if C[i] > 1:
